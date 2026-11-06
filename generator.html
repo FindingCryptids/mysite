@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptid Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #1a1a1a; color: #ffffff; padding: 50px 20px; }
+        .back-link { display: inline-block; margin-bottom: 40px; color: #888; text-decoration: none; }
+        .back-link:hover { color: #fff; }
+        button { padding: 15px 30px; font-size: 18px; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-weight: bold; }
+        button:hover { background-color: #45a049; }
+        #result { font-size: 28px; font-weight: bold; margin-top: 40px; color: #ffeb3b; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Main Page</a>
+    <h1>Random Cryptid Generator</h1>
+    <p>Click the button to reveal a creature...</p>
+    <button onclick="generateWord()">Generate</button>
+    <div id="result"></div>
+    <script>
+        const cryptids = ["Bigfoot", "Mothman", "Chupacabra", "Jersey Devil", "Loch Ness Monster", "Kraken", "Yeti", "Jackalope"];
+        function generateWord() {
+            const randomIndex = Math.floor(Math.random() * cryptids.length);
+            document.getElementById("result").innerText = cryptids[randomIndex];
+        }
+    </script>
+</body>
+</html>
